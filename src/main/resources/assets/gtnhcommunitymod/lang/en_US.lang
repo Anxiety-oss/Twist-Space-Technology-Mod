@@ -2355,6 +2355,6 @@ GT5U.gui.text.recipe_result.SimpleShutDownReasons.NoAnnihilationConstrainerInput
 TST.SimpleStructureErrors.missing_oscillator_ring=Missing SpaceTime Oscillator ring(s).
 TST.SimpleStructureErrors.missing_constraintor_ring=Missing SpaceTime Constraintor ring(s).
 TST.SimpleStructureErrors.missing_merger_ring=Missing SpaceTime Merger ring(s).
-TST_LargeSolarBoiler.gui.02=§fHeat: §6%s%%§r
-TST_LargeSolarBoiler.gui.03=§fCalcification Level: §6%s%%§r
+TST_LargeSolarBoiler.gui.02=Heat:
+TST_LargeSolarBoiler.gui.03=Calcification Level:
 TST_LargeSolarBoiler.gui.01=Press to clear the machine
