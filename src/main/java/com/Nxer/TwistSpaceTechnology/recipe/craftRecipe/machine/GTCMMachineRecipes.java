@@ -193,6 +193,7 @@ import appeng.items.materials.MaterialType;
 import bartworks.common.loaders.ItemRegistry;
 import bartworks.system.material.CircuitGeneration.CircuitPartsItem;
 import bartworks.system.material.WerkstoffLoader;
+import bartworks.common.loaders.BioItemList;
 import cpw.mods.fml.common.registry.GameRegistry;
 import fox.spiteful.avaritia.items.LudicrousItems;
 import ggfab.GGItemList;
@@ -1525,7 +1526,7 @@ public class GTCMMachineRecipes {
             .itemInputs(
                 GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Osmiridium, 64),
                 GTUtility.copyAmountUnsafe(64, bioVat),
-                GTUtility.copyAmountUnsafe(64, new ItemStack(GameRegistry.findItem("bartworks", "BioLabParts"))),
+                GTUtility.copyAmountUnsafe(64, BioItemList.getPetriDish(null)),
                 GTOreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Infinity, 3),
 
                 ItemList.Electric_Pump_UHV.get(16),
