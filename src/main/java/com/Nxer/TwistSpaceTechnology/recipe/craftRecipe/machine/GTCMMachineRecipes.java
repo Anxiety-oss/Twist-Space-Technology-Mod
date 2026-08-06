@@ -3556,7 +3556,7 @@ public class GTCMMachineRecipes {
         addCraftingRecipe(
             GTCMItemList.LargeSolarBoiler.get(1),
             new Object[]{"AAA", "BCB", "DED",
-                'A', Ic2Items.reinforcedGlass,
+                'A', ItemList.gt.blockglass1:10,
                 'B', OrePrefixes.plateQuintuple.get(Materials.Silver),
                 'C', ItemList.Machine_Bronze_Boiler_Solar,
                 'D', OrePrefixes.pipeLarge.get(Materials.Bronze),
