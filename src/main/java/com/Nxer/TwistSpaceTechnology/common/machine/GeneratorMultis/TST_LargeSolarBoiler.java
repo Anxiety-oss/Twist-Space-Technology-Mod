@@ -37,7 +37,6 @@ import net.minecraftforge.fluids.FluidStack;
 import org.apache.commons.lang3.tuple.Pair;
 
 import com.Nxer.TwistSpaceTechnology.common.init.TstBlocks;
-import com.Nxer.TwistSpaceTechnology.common.machine.MiscHelper;
 import com.Nxer.TwistSpaceTechnology.common.machine.UI.MUI2.TST_Gui_LargeSolarBoiler;
 import com.Nxer.TwistSpaceTechnology.common.machine.multiMachineClasses.GTCM_MultiMachineBase;
 import com.Nxer.TwistSpaceTechnology.common.tile.TileLargeSolarBoilerRender;
@@ -562,10 +561,10 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
     protected MultiblockTooltipBuilder createTooltip() {
         final MultiblockTooltipBuilder tt = new MultiblockTooltipBuilder();
         tt.addMachineType(
-                // #tr TST_LargeSolarBoiler.machineType
-                // # Solar Boiler
-                // #zh_CN 太阳能锅炉
-                TextEnums.tr("TST_LargeSolarBoiler.machineType"))
+            // #tr TST_LargeSolarBoiler.machineType
+            // # Solar Boiler
+            // #zh_CN 太阳能锅炉
+            TextEnums.tr("TST_LargeSolarBoiler.machineType"))
             .addInfo(
                 // #tr TST_LargeSolarBoiler.tooltip.01
                 // # Steam Power by the Sun.
@@ -586,9 +585,9 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
                 // # On a clear day, it will quickly
                 // #zh_CN 在白天晴天时, 机器将快速升温,
                 TextEnums.tr("TST_LargeSolarBoiler.tooltip.04") + " (" + heatIncreaseSpeed * 100 + "%/s) "
-                    // #tr TST_LargeSolarBoiler.tooltip.05
-                    // # increase its temperature until it reaches its maximum.
-                    // #zh_CN , 直到达到最大温度.
+                // #tr TST_LargeSolarBoiler.tooltip.05
+                // # increase its temperature until it reaches its maximum.
+                // #zh_CN , 直到达到最大温度.
                     + TextEnums.tr("TST_LargeSolarBoiler.tooltip.05"))
             .addInfo(
                 // #tr TST_LargeSolarBoiler.tooltip.06
@@ -711,7 +710,7 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
 
     @Override
     public ITexture[] getTexture(IGregTechTileEntity aBaseMetaTileEntity, ForgeDirection side, ForgeDirection facing,
-                                 int colorIndex, boolean aActive, boolean aRedstone) {
+        int colorIndex, boolean aActive, boolean aRedstone) {
         if (side == facing) {
             if (aActive) return new ITexture[] { Textures.BlockIcons.getCasingTextureForId(getCasingTextureID()),
                 TextureFactory.builder()
@@ -741,17 +740,17 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
     protected void drawTexts(DynamicPositionedColumn screenElements, SlotWidget inventorySlot) {
         super.drawTexts(screenElements, inventorySlot);
         screenElements.widget(
-                new TextWidget().setStringSupplier(
-                    () -> EnumChatFormatting.WHITE
-                        // #tr TST_LargeSolarBoiler.gui.02
-                        // # Heat:
-                        // #zh_CN 热量:
-                        + TextEnums.tr("TST_LargeSolarBoiler.gui.02")
-                        + " "
-                        + EnumChatFormatting.GOLD
-                        + numberFormat.format((int) (heat * 100))
-                        + "% "
-                        + EnumChatFormatting.RESET))
+            new TextWidget().setStringSupplier(
+                () -> EnumChatFormatting.WHITE
+                    // #tr TST_LargeSolarBoiler.gui.02
+                    // # Heat:
+                    // #zh_CN 热量:
+                    + TextEnums.tr("TST_LargeSolarBoiler.gui.02")
+                    + " "
+                    + EnumChatFormatting.GOLD
+                    + numberFormat.format((int) (heat * 100))
+                    + "% "
+                    + EnumChatFormatting.RESET))
             .widget(
                 new TextWidget().setStringSupplier(
                     () -> EnumChatFormatting.WHITE
@@ -773,11 +772,11 @@ public class TST_LargeSolarBoiler extends GTCM_MultiMachineBase<TST_LargeSolarBo
         super.addUIWidgets(builder, buildContext);
 
         builder.widget(new ButtonWidget().setOnClick((clickData, widget) -> {
-                if (clickData.mouseButton == 0) {
-                    calcification = 0;
-                    runningTicks = 0;
-                }
-            })
+            if (clickData.mouseButton == 0) {
+                calcification = 0;
+                runningTicks = 0;
+            }
+        })
             .setPlayClickSound(true)
             .setBackground(
                 () -> new IDrawable[] { GTUITextures.BUTTON_STANDARD,
